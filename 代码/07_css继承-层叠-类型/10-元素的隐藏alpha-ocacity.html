@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* alpha只是设置当前color其中的颜色透明度为某一个值 不会影响子元素 */
+        .box {
+            color: rgba(255, 0, 0, .5);
+        }
+        /* opacity 设置透明度 并且会携带所有子元素都有一定的透明度 */
+        .box2 {
+            color: green;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">我的div元素</div>
+    <div class="box2">我的div2元素</div>
+</body>
+</html>
