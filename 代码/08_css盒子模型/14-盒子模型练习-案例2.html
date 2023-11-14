@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        .item {
+            display: inline-block;
+            width: 234px;
+            height: 300px;
+            background-color: #fff;
+            padding: 20px 10px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .item img {
+            width: 160px;
+            height: 160px;
+        }
+        .item .price {
+            font-size: 14px;
+            margin-top: 14px;
+        }
+        .title {
+            margin-top: 14px;
+        }
+        .desc {
+            color: #999;
+            margin-top: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .price .new-price {
+            color: orange;
+        }
+        .price .old-price {
+            color: #555;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <a class="item" href="https://www.mi.com/xiaomipad5pro">
+        <img src="../images/xiaomi01.webp" alt="">
+        <h3 class="title">小米平板5 Pro</h3>
+        <p class="desc">全新12代英特尔处理器，CNC一体精雕工艺，2.5K 120Hz高清屏，可选MX550独立显卡</p>
+        <div class="price">
+            <span class="new-price">2399</span>
+            <span class="old-price">2499</span>
+        </div>
+    </a>
+</body>
+</html>
