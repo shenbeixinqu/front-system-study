@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul li:nth-child(3) {
+      color: red;
+    }
+    ul li:nth-child(2n) {
+      color: green;
+    }
+    /* 选取前5个 */
+    ul li:nth-child(-n + 2) {
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>列表元素1</li>
+    <li>列表元素2</li>
+    <li>列表元素3</li>
+    <li>列表元素4</li>
+    <li>列表元素5</li>
+    <li>列表元素6</li>
+  </ul>
+</body>
+</html>
