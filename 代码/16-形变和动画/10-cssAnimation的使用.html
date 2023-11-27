@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: orange;
+
+      animation-name: moveAmi;
+      animation-duration: 3s;
+      animation-timing-function: ease-in-out;
+      /* 其他属性 */
+      animation-delay: 1s;
+      /* 循环次数 */
+      animation-iteration-count: 2;
+      /* 动画方向 */
+      animation-direction: reverse;
+      /* 执行动画后 停留在哪 
+          forwards 动画最后一帧的位置
+          backwards 动画第一帧的位置
+      */
+      animation-fill-mode: forwards;
+
+    }
+    @keyframes moveAmi {
+      0% {
+        transform: translate(0, 0) scale(0.5, 0.5);
+      }
+
+      33% {
+        transform: translate(0, 200px) scale(1.1, 1.1);
+      }
+
+      66% {
+        transform: translate(400px, 200px) scale(0.7, 0.7);
+      }
+
+      100% {
+        transform: translate(400px, 0) scale(0.5, 0.5);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
