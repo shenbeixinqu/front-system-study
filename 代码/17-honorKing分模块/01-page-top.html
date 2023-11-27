@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+        .top {
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .top .area {
+            display: flex;
+            height: 41px;
+            line-height: 41px;
+            justify-content: space-between;
+        }
+
+        .top .left_area {
+            display: flex;
+        }
+
+        .top .left_area .logo a {
+            display: block;
+            width: 150px;
+            text-indent: -9999px;
+            background: url('./img/top_logo.png') no-repeat center center;
+        }
+
+        .top .right_area {
+            display: flex;
+        }
+
+        .top .right_area .item a {
+            display: block;
+            position: relative;
+            font-size: 14px;
+            color: #464646;
+        } 
+
+        .top .right_area .item a.ranking {
+            margin-left: 20px;
+            padding-right: 30px;
+        }
+
+        .top .right_area .item a.ranking::after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto 0;
+            background: url('./img/top_sprite.png') no-repeat 0 0;
+
+            opacity: 0.2;
+            transform: rotate(90deg);
+        }
+        .top .right_area .item a.grouth {
+            padding-left: 30px;
+        }
+        .top .right_area .item a .icon-grow {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto 0;
+            background: url('./img/top_sprite.png') no-repeat -30px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="top_wrapper area">
+            <div class="left_area">
+                <h2 class="logo">
+                    <a href="#">腾讯游戏</a>
+                </h2>
+                <div class="recommand">
+                    <img src="./img/recommend_game.jpg" alt="">
+                </div>
+            </div>
+            <ul class="right_area">
+                <li class="item">
+                    <a href="#" class="grouth">
+                        <i class="icon-grow"></i>
+                        成长守护平台
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#" class="ranking">腾讯游戏排行榜</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
