@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* html {
+      --main-color: #f3c246
+    } */
+    /* :root 伪元素 等价于 html   
+    {}中定义了一个变量 定义的变量只有后代元素可以使用 */
+    :root {
+      --main-color: #f3c246
+    }
+    .box {
+      color: var(--main-color);
+    }
+    .title {
+      color: var(--main-color);
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    我是box元素
+  </div>
+  <div class="title">
+    我是title
+  </div>
+</body>
+</html>

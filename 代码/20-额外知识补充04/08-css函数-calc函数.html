@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 500px;
+      height: 200px;
+      background-color: orange;
+    }
+    .item {
+      display: inline-block;
+      height: 50px;
+    }
+    .item1 {
+      /* width的百分比相对于包含块 */
+      /* calc计算 + -符号左右要有空格 */
+      width: calc(100% - 100px);
+      background-color: red;
+    }
+    .item2 {
+      width: 100px;
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="item item1"></div>
+    <div class="item item2"></div>
+  </div>
+</body>
+</html>
