@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 100px;
+      background-color: orange;
+
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  </style>
+</head>
+<body>
+  <!-- clip 溢出的内容直接裁剪掉 (可能显示不完整)
+  ellipse 溢出的结尾处有省略号显示 -->
+  <div class="box">
+    my name is why, from china apple banana orange
+  </div>
+</body>
+</html>
