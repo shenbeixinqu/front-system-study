@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 编写位置1 -->
+  <!-- <a href="#" onclick="alert('百度一下')">百度一下</a> -->
+
+  <!-- 编写位置2 -->
+  <a class="google" href="#">google</a>
+  
+  <!-- 编写位置3 -->
+  <a class="bing" href="#">bing</a>
+  <script>
+    var googleAEl = document.querySelector(".google")
+    googleAEl.onclick = function() {
+      alert('google一下')
+    }
+  </script>
+  <script src="./js/bing.js"></script>
+
+</body>
+</html>
