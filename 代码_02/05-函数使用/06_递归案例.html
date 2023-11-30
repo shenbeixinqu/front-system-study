@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 递归实现x的n次方 
+    // 递归必须要有1个结束条件
+    // 递归性能比较低
+    function pow2(x, n) {
+      if (n === 1) return x
+      return x * pow2(x, n - 1)
+    }
+
+    console.log(pow2(2, 3))
+    console.log(pow2(3, 3))
+  </script>
+</body>
+</html>

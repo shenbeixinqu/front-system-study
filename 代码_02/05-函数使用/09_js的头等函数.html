@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ </head>
+ <body>
+    <script>
+      // 函数做为头等公民
+      // 函数可以被赋值给变量
+      var bar = function() {
+        console.log("bar函数被执行")
+      }
+      // bar()
+
+      // 函数在变量之间进行传递
+      var bar2 = bar
+      // bar2()
+
+      // 函数可以作为另一个函数的参数
+      function foo(fn) {
+        console.log('fn', fn)
+        fn()
+      }
+
+      // foo(bar)
+
+      // 函数可以另一个函数的返回值
+      function sayHello() {
+        function hi() {
+          console.log('hi')
+        }
+        return hi
+      }
+
+      var fn = sayHello()
+      fn()
+
+      // 函数可以存储在另一种数据结构中
+
+    </script>
+ </body>
+ </html>
