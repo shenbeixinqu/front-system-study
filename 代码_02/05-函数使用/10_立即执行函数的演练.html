@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 立即执行函数 常用的写法
+    (function() {
+      console.log("我是立即执行函数")
+    })()
+
+    // 立即函数的返回值和参数
+    var result = (function(name) {
+      console.log("立即执行函数的参数和返回值", name)
+      return "hello world"
+    })("tom")
+    console.log("Result:", result)
+  </script>
+</body>
+</html>

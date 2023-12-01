@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="btn">按钮1</button>
+  <button class="btn">按钮2</button>
+  <button class="btn">按钮3</button>
+  <button class="btn">按钮4</button>
+  <script>
+    // 普通版本
+    // 这里在点击按钮前 循环已经走完 i在全局变量中已经是3 所以点击哪个按钮都是3
+    var btns = document.querySelectorAll(".btn")
+    for (var i = 0; i < btns.length; i++) {
+      var btn = btns[i];
+      btn.onclick = function() {
+        console.log(`点击了按钮${i}`)
+      }
+    }
+
+
+    // 立即执行函数版本
+    var btns = document.querySelectorAll(".btn")
+    for (var i = 0; i < btns.length; i++) {
+      var btn = btns[i];
+      (function(m) {
+        btn.onclick = function() {
+          console.log(`点击了按钮${m + 1}`)
+        }
+      })(i)
+    }
+  </script>
+</body>
+</html>
