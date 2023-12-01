@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      构造函数:
+        创建一个函数被new操作符调用
+          创建出来一个新的空对象
+          让this指向这个空对象
+          执行函数体的代码块
+          如果没有一个明确的返回一个非空对象 那么this指向的对象会自动返回
+    */
+    
+    function Coder(name, age, height) {
+      this.name = name
+      this.age = age
+      this.height = height
+      this.run = function() {
+        console.log("running")
+      }
+    }
+
+    var coder1 = new Coder("aaa", 16, 1.67)
+    var coder2 = new Coder("bbb", 26, 1.77)
+    console.log(coder1)
+    console.log(coder2)
+  </script>
+</body>
+</html>

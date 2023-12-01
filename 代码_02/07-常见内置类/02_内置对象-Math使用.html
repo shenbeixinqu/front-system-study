@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var num1 = 3.12
+    console.log(Math.floor(num1))
+    console.log(Math.ceil(num1))
+    console.log(Math.round(num1))
+
+    // random 随机生成[0, 1)
+    console.log(Math.random())
+
+    // 案例: 随机会生成 [5, 50)
+    // 拓展 随机生成 [a, b)
+    // x = a
+    // y = b - a 
+    // Math.floor(Math.random() * y) + x
+    var randomNum = Math.floor(Math.random() * 45) + 5
+    console.log(randomNum)
+  </script>
+</body>
+</html>

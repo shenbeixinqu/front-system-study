@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 浏览器存在一个全局对象object -> window
+    // 作用一: 查找变量时 最终会找到window头上
+    // 作用二: 将一些方法/函数 放到window对象上面
+    console.log(window)
+
+    function foo() {
+      // 作用一
+      console.log(message)
+
+      // 作用二
+      alert("HELLO WORLD")
+    }
+  </script>
+</body>
+</html>
