@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 函数中有一个this的变量 this变量在大多数情况下会指向一个对象
+
+    // 情况一 如果普通的函数被默认调用 那么this的指向就行window
+    // function foo(name, age) {
+    //   console.log(this)
+    // }
+
+    // foo("abc", 123)
+
+    // 情况二 
+    // 如果函数它是被一个对象来引用并且调用它 那么this会指向这个对象
+    var obj = {
+      name: "why",
+      running: function() {
+        console.log(this)
+      }
+    }
+
+    obj.running()
+
+    // 情况三  符合情况一
+    var fn = obj.running
+    fn()
+
+    // 情况四  符合情况二
+    function bar() {
+      console.log(this)
+    }
+
+    var obj = {
+      name: "why",
+      bar: bar
+    }
+
+    obj.bar()
+
+
+
+  </script>
+</body>
+</html>
