@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var names = ["abc", "cba", "nba", "mba"]
+    // indexOf 
+    // 找到返回对应的索引  没找到返回-1
+    console.log(names.indexOf('nba'))
+    console.log(names.indexOf('nbb'))
+
+    // includes
+    console.log(names.includes('nba'))
+
+    // find
+    // 找到返回对应的item 没找到返回undefined 
+    var students = [
+      { id: 100, name: "why", age: 18 },
+      { id: 101, name: "kobe", age: 30 },
+      { id: 102, name: "james", age: 25 },
+      { id: 103, name: "why", age: 22 }
+    ]
+    var stu = students.find(item => item.id === 101)
+    console.log(students)
+    console.log(stu)
+    var stu1 = students.find(item => item.id === 106)
+    console.log(stu1)
+  </script>
+</body>
+</html>

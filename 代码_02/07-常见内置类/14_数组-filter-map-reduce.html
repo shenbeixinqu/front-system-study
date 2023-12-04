@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // filter
+    var nums = [11, 20, 55, 100, 88, 32]
+    var filterNum = nums.filter(item => item % 2 === 0)
+    console.log(nums)
+    console.log(filterNum)
+
+    // map  映射
+    var mapNum = nums.map(item => item * item)
+    console.log(mapNum)
+
+    // reduce 累加
+    var reduceNum = nums.reduce((pre, item) => pre + item)
+    console.log(reduceNum)
+
+    // reduce 练习  33行 0 为 初始值
+    var products = [
+      { name: "鼠标", price: 88, count: 3 },
+      { name: "键盘", price: 200, count: 2 },
+      { name: "耳机", price: 9.9, count: 10 },
+    ]
+    var totalPrice = products.reduce((prev, item) => {
+      return prev + item.price * item.count
+    }, 0)
+    console.log(totalPrice, typeof totalPrice)
+
+    // 过滤所有的偶数, 映射所有偶数的平方, 并且计算他们的和
+    var total = nums.filter(item => item % 2 === 0)
+                .map(item => item * item)
+                .reduce((prev, item) => prev + item, 0)
+    console.log(total)
+  </script>
+</body>
+</html>
