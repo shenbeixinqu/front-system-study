@@ -8,7 +8,19 @@
 </head>
 <body>
   <script>
-    
+     // 字符串的遍历
+    // for普通遍历
+    for (var i = 0; i < message.length; i++) {
+      console.log(message[i])
+    }
+
+    // for..of的遍历 -> 迭代器
+    // 目前可迭代对象: 字符串/数组
+    // 对象是不支持for..of
+    // String对象内部是将字符串变成了一个可迭代对象
+    for (var char of message) {
+      console.log(char)
+    }
   </script>
 </body>
 </html>
