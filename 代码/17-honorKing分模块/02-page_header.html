@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+        .header {
+            background-color: rgba(0, 0, 0, .8);
+        }
+
+        .header .area {
+            height: 84px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .area .left-area {
+            display: flex;
+        }
+
+        .area .left-area .logo a {
+            position: relative;
+            top: 50%;
+            transform: translate(0, -50%);
+            display: block;
+            width: 200px;
+            height: 54px;
+            text-indent: -999px;
+            background: url('./img/logo.png') no-repeat center center;
+        }
+
+        .area .left-area .nav-list {
+            display: flex;
+            margin-left: 30px;
+            /* align-items: center; */
+        }
+
+        .area .left-area .nav-list .item {
+            /* text-align: center; */
+            width: 110px;
+            padding-right: 5px;
+        }
+
+        .header .left-area .nav-list .item:hover,
+        .header .left-area .nav-list .item.active {
+            background: url(./img/main_sprite.png) no-repeat 0 0;
+        }
+
+        .area .left-area .nav-list .item a {
+            /* 添加 */
+            display: block;
+            height: 100%;
+            padding-top: 20px;
+            box-sizing: border-box;
+            text-align: center;
+
+            font-size: 18px;
+            color: #c9c9dd;
+        }
+
+        .area .left-area .nav-list .item a:hover {
+            color: orange;
+        }
+
+        .area .left-area .nav-list a .desc {
+            display: block;
+            font-size: 12px;
+            margin-top: 8px;
+            color: #858792;
+        }
+
+        .header .left-area .nav-list .item:hover .desc,
+        .header .left-area .nav-list .item.active .desc {
+            color: #91763f;
+        }
+
+        .area .left-area .search {
+            margin-left: 10px;
+        }
+
+        .area .left-area .search a {
+            display: block;
+            position: relative;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 27px;
+            height: 26px;
+            background: url('./img/nav_search.png') no-repeat center center;
+        }
+
+        .area .right-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .area .right-area .image img {
+            border: 1px solid orange;
+            border-radius: 50%;
+        }
+
+        .area .right-area .info {
+            margin-left: 12px;
+        }
+
+        .area .right-area .info a {
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .area .right-area .info p {
+            font-size: 14px;
+            color: #858792;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="area header_wrapper">
+            <div class="left-area">
+                <h1 class="logo">
+                    <a href="#">王者荣耀</a>
+                </h1>
+                <ul class="nav-list">
+                    <li class="item active">
+                        <a href="#">
+                            游戏资料
+                            <span class="desc">DATA</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            内容中心
+                            <span class="desc">CONTENTS</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            赛事中心
+                            <span class="desc">MATCH</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            百态王者
+                            <span class="desc">CULTURE</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            社区互动
+                            <span class="desc">COMMUNITY</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            玩家支持
+                            <span class="desc">PLAYER</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            IP新游
+                            <span class="desc">NEW GAMES</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="search">
+                    <a href="#"></a>
+                </div>
+            </div>
+            <div class="right-area">
+                <a class="image" href="#">
+                    <img src="./img/header_login.png" alt="">
+                </a>
+                <div class="info">
+                    <a href="#">欢迎登录</a>
+                    <p>登录后查看游戏战绩</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
