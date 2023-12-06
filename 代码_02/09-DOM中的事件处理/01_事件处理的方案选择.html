@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="btn1">btn1</button>
+  <button class="btn2">btn2</button>
+  <script>
+    var btn1El = document.querySelector(".btn1")
+    var btn2El = document.querySelector(".btn2")
+    btn1El.onclick = function() {
+      console.log("我是btn1")
+    }
+
+    btn2El.addEventListener('click', function() {
+      console.log("我是btn2-1")
+    })
+    btn2El.addEventListener('click', function() {
+      console.log("我是btn2-2")
+    })
+    btn2El.addEventListener('click', function() {
+      console.log("我是btn2-3")
+    })
+  </script>
+</body>
+</html>
