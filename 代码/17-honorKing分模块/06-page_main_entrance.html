@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    .entrance-section {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .entrance-section .item {
+      width: 291px;
+      height: 134px;
+    }
+
+    .entrance-section a {
+      display: block;
+      overflow: hidden;
+    }
+
+    .entrance-section a img {
+      width: 100%;
+      height: 100%;
+      transition: transform 400ms ease-in;
+    }
+
+    .entrance-section a:hover img {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="main_wrapper">
+    <ul class="entrance-section">
+      <li class="item">
+        <a href="">
+          <img src="./img/entrance_01.jpg" alt="">
+        </a>
+      </li>
+      <li class="item">
+        <a href="">
+          <img src="./img/entrance_02.png" alt="">
+        </a>
+      </li>
+      <li class="item">
+        <a href="">
+          <img src="./img/entrance_03.jpg" alt="">
+        </a>
+      </li>
+      <li class="item">
+        <a href="">
+          <img src="./img/entrance_04.png" alt="">
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

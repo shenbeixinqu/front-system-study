@@ -1,4 +1,4 @@
-body, h1, h2, h3, ul, li, p {
+body, h1, h2, h3, ul, li, p, i{
     padding: 0;
     margin: 0;
 }
@@ -15,3 +15,9 @@ img {
 ul, li, ol {
     list-style: none;
 }
+
+/* 对斜体元素重置 */
+i, em {
+    font-style: normal;
+  }
+  
