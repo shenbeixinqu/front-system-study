@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      background-color: orange;
+    }
+    .box button {
+      height: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <button>新增</button>
+    <button>修改</button>
+    <button>删除</button>
+  </div>
+
+  <script>
+    // 对按钮进行监听
+    // var btnsEl = document.querySelectorAll('button')
+    // for (btnEl of btnsEl) {
+    //   btnEl.onmouseover = function(event) {
+    //     // 方法一
+    //     // console.log(this.textContent)
+    //     // 方法二
+    //     console.log(event.target.textContent)
+    //   }      
+    // }
+
+    // 事件委托
+    var boxEl = document.querySelector(".box")
+    boxEl.onmouseover = function(event) {
+      if (event.target.tagName === 'BUTTON') {
+        console.log(event.target.textContent)
+      }
+    }
+  
+  </script>
+</body>
+</html>
