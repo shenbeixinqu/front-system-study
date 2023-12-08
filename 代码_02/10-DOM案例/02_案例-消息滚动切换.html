@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .tip-bar {
+      display: inline-flex;
+      align-items: center;
+      height: 30px;
+      background-color: rgba(0,0,0,.4);
+      border-radius: 15px;
+    }
+    .tip-bar img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+    .tip-bar span {
+      font-size: 13px;
+      color: white;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="tip-bar">
+    <img src="https://bfs.biyao.com/group1/M01/A2/67/rBACVGA_iOuAYaTxAAAPbted3yE165.png" alt="">
+    <span>183***138对这件商品感兴趣</span>
+  </div>
+
+  <script>
+     // 1.从服务器拿到数据ajax/fetch请求
+     let tipList = [
+      {
+        icon: 'https://bfs.biyao.com/group1/M01/A6/97/rBACYWBCHqyAFH5tAAANZXX5Eww646.png',
+        title: 'coderwhy对这件商品感兴趣'
+      },
+      {
+        icon: 'https://bfs.biyao.com/group1/M01/A2/67/rBACVGA_iOuAYaTxAAAPbted3yE165.png',
+        title: '123***814对这件商品感兴趣'
+      },
+      {
+        icon: 'https://bfs.biyao.com/group1/M00/7F/4E/rBACYV16HseAP-PnAAAW9bbVoKE463.png',
+        title: '刘军对这件商品感兴趣'
+      }
+    ]
+
+    var tipBarEl = document.querySelector(".tip-bar")
+    var imgEl = tipBarEl.querySelector("img")
+    var spanEl = tipBarEl.querySelector("span")
+
+    var curentIndex = 0
+    setInterval(function() {
+      imgEl.src = tipList[curentIndex].icon
+      spanEl.textContent = tipList[curentIndex].title
+
+      curentIndex++
+      if (curentIndex === tipList.length) {
+        curentIndex = 0
+      }
+    }, 3000)
+  </script>
+</body>
+</html>

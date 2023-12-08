@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="out">停用timeout</button>
+  <button class="itv">停用inerval</button>
+  
+  <script>
+    var out = document.querySelector(".out")
+    var itv = document.querySelector(".itv")
+
+
+    function bar() {
+      console.log("aaa被调用了")
+    }
+    
+    var outTimer = setTimeout(bar, 3000)
+
+
+    function foo() {
+      console.log("bbb被调用了")
+    }
+
+    var itvTimer = setInterval(foo, 3000)
+
+
+    out.onclick = function() {
+      clearTimeout(outTimer)
+    }
+
+    itv.onclick = function() {
+      clearInterval(itvTimer)
+    }
+
+  </script>
+</body>
+</html>

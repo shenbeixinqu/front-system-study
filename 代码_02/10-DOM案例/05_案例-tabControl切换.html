@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>王者荣耀-main-news</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <style>
+    .main .section-content {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .main .section-content .left-content {
+      width: 872px;
+      height: 1000px;
+    }
+    .main .section-content .right-content {
+      width: 295px;
+      height: 500px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="main main_wrapper">
+    <div class="section-content">
+      <div class="left-content">
+        <div class="content-center">
+          <div class="section_header">
+            <div class="header_left">
+              <h3 class="title">内容中心</h3>
+            </div>
+            <div class="header_right" href="#">
+              <a class="more" href="#">更多</a>
+            </div>
+          </div>
+          <div class="tab_control">
+            <div class="item active">精品栏目</div>
+            <div class="line"></div>
+            <div class="item">赛事精品</div>
+            <div class="line"></div>
+            <div class="item">英雄攻略</div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <script>
+    var tabEl = document.querySelector('.tab_control')
+    var activeEl = document.querySelector('.active')
+    tabEl.onmouseover = function(event) {
+      var target = event.target
+      if (target.classList.contains('item')) {
+        activeEl.classList.remove('active')
+        // 将当前进入的item变成active
+        target.classList.add('active')
+        // 将最新的itemEl 变成activeEl
+        activeEl = target
+      }
+    }
+  </script>
+</body>
+</html>
