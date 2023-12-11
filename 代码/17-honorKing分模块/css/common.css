@@ -57,3 +57,77 @@ body {
     color: #1e96ab;
     border-color: #1e96ab;
 }
+
+/* section_header */
+
+.section_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+
+
+.section_header .header_left .title {
+    font-size: 22px;
+    color: #323235;
+    padding-left: 30px;
+    background: url(../img/main_sprite.png) no-repeat 0px -102px;
+}
+
+.section_header .header_right .more {
+    display: block;
+    padding-left: 22px;
+    background: url(../img/main_sprite.png) no-repeat -250px 3px;
+}
+
+.section_header .header_right .more:hover {
+    color: #f3c258;
+}
+
+.tab_control {
+    display: flex;
+    height: 32px;
+    line-height: 29px;
+    align-items: center;
+    background-color: #f5f5f5;
+
+}
+
+.tab_control > .item {
+    flex: 1;
+    color: #999;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+
+}
+
+.tab_control .item.active,
+.tab_control .item:hover {
+    color: #333;
+    border-bottom-color: #f3c258;
+} 
+
+
+
+.key_keyword {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.key_keyword .item {
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 1px 10px;
+    margin: 4px 6px;
+}
+
+.key_keyword .item.active,
+.key_keyword .item:hover {
+    color: #fff;
+    border-color: #f3c258;
+    background-color: #f3c258;
+}
