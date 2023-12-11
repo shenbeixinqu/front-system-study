@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 完整的url
+    console.log(location.href)
+    // 获取url信息
+    console.log(location.host)
+    console.log(location.hash)
+
+    // UrlSearchString
+    var UrlSearchString = "?name=why&age=18&height=1.88"
+    var searchString = new URLSearchParams(UrlSearchString)
+
+    console.log(searchString.get("name"))
+    console.log(searchString.get("age"))
+    console.log(searchString.get("height"))
+
+    searchString.append("address", "广州市")
+    console.log(searchString.get("address"))
+    console.log(searchString.toString())
+  </script>
+</body>
+</html>
