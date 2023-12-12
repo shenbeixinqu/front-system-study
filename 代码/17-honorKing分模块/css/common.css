@@ -76,6 +76,10 @@ body {
     background: url(../img/main_sprite.png) no-repeat 0px -102px;
 }
 
+.section_header .header_left .title.title-icon-match {
+    background: url(../img/main_sprite.png) no-repeat 0 -180px;
+}
+
 .section_header .header_right .more {
     display: block;
     padding-left: 22px;
