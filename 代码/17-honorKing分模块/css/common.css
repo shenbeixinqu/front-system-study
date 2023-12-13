@@ -58,6 +58,19 @@ body {
     border-color: #1e96ab;
 }
 
+.news_type_match {
+    display: inline-block;
+    width: 52px;
+    height: 23px;
+    margin-right: 12px;
+    border-radius: 10px;
+    line-height: 23px;
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    background-color: #e3e3e3;
+}
+
 /* section_header */
 
 .section_header {
@@ -111,7 +124,12 @@ body {
     text-align: center;
     cursor: pointer;
     border-bottom: 3px solid transparent;
+}
 
+.tab_control > .item.item_wrap {
+    flex: 0 auto;
+    flex-grow: 0;
+    padding: 0 27px;
 }
 
 .tab_control .item.active,
