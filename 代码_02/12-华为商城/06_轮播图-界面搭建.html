@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    .banner .images {
+      position: relative;
+    }
+    .banner .images .item {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      overflow: hidden;
+      opacity: 0;
+    
+    }
+
+    .banner .images .active {
+      opacity: 1;
+    }
+
+    .banner .images .item img{
+      position: relative;
+      transform: translate(-50%);
+      left: 50%;
+      width: 1920px;
+      height: 550px;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <ul class="images">
+      <li class="item active">
+        <img src="./img/banner_01.webp" alt="">
+      </li>
+      <li class="item">
+        <img src="./img/banner_01.webp" alt="">
+      </li>
+      <li class="item">
+        <img src="./img/banner_01.webp" alt="">
+      </li>
+      <li class="item">
+        <img src="./img/banner_01.webp" alt="">
+      </li>
+    </ul>
+    <div class="control">
+      <button>上一个</button>
+      <button>下一个</button>
+    </div>
+    <div class="indicator"></div>
+  </div>
+</body>
+</html>
