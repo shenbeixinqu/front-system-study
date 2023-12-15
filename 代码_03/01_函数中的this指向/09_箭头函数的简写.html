@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    
+    var names = ["abc", "cba", "nba"]
+
+    // 如果箭头函数只有一个参数 () 可以省略
+    names.forEach(item => {
+      console.log(item)
+    })
+
+    // 如果函数体只有一行执行代码 {} 可以省略
+    names.forEach(item => console.log(item))
+
+    // 如果默认返回值是一个对象 这个对象必须加()
+    var arrFn = () => ({ name: "why" })
+  </script>
+</body>
+</html>
