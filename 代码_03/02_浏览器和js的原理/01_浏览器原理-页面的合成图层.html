@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 分层虽然可以提高性能 但是是以内存管理为代价 所以不应该作为web性能优化策略的一部分过渡使用  -->
+  <style>
+    .box, .container {
+      width: 200px;
+      height: 200px;
+      background-color: orange;
+      transition: all 0.3s ease-in;
+    }
+
+    .container {
+      background-color: purple;
+      /* 会生成新的图层
+        position: fixed
+        transform: translateZ(0)
+      */
+    }
+
+    .container:hover {
+      transform: translateX(100px);
+      /* opacity: 0.2; */
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+
+  <div class="container"></div>
+</body>
+</html>

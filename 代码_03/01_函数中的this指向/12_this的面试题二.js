@@ -12,6 +12,12 @@ var person1 = {
     }
   },
   foo4: function() {
+    // console.log(this) 
+    /**
+     * 第一个this  person1
+     * 第二个this  person2
+     * 第三个this  person1
+     */
     return () => {
       console.log(this.name)
     }
