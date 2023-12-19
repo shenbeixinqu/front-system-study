@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // // 一    
+    // var n = 100
+    // function foo() {
+    //   n = 200
+    // }
+    // foo()
+    // console.log(n)  // 200
+
+    // // 二
+    // var n = 100
+    // function foo() {
+    //   console.log(n)   // undefined
+    //   var n = 200
+    //   console.log(n)   // 200
+    // }
+    // foo ()
+
+    // 3.面试题三:
+    // var n = 100
+
+    // function foo1() {
+    //   console.log(n)  // 200
+    // }
+    // function foo2() {
+    //   var n = 200
+    //   console.log(n)  // 100
+    //   foo1()
+    // }
+    // foo2()
+
+
+    // 4.面试题四:
+    // var n = 100
+    // function foo() {
+    //   console.log(n)  // undefined
+    //   return
+    //   var n = 200
+    // }
+    // foo()
+
+    // 5.面试题五:
+    function foo() {
+      var a = b = 100
+    }
+    foo()
+    console.log(b)  // 100
+
+  </script>
+</body>
+</html>
