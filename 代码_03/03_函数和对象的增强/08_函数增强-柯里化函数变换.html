@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 普通的函数
+    function foo1(x, y, z) {
+      console.log(x + y + z)
+    }
+
+    foo1(10, 20, 30)
+
+    // 柯里化函数
+    function foo2(x) {
+      return function(y) {
+        return function(z) {
+          console.log(x + y + z)
+        }
+      }
+    }
+
+    foo2(10)(20)(40)
+
+    // 箭头函数的写法
+    function foo3(x) {
+      return y => z => console.log(x + y + z)
+    }
+
+    var foo3_1 = x => y => z => console.log(x + y + z)
+    foo3_1(20)(30)(40)
+  </script>
+</body>
+</html>

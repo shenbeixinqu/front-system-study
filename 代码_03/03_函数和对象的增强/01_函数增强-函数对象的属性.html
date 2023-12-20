@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var obj = {}
+    obj.address = "沈阳市"
+    console.log("obj", obj.address)
+
+    function foo() {
+
+    }
+    
+    function bar(m, n=1, ...others) {
+
+    }
+
+    // 自定义属性
+    foo.message = "Hello"
+    console.log("foo", foo.message)
+  
+    // 函数对象中有自己的属性
+    // name属性
+    console.log(foo.name)
+    console.log(bar.name)
+
+    // length 参数的个数  不计算剩余参数和赋值参数(n=1)
+    console.log(foo.length)
+    console.log(bar.length)
+  </script>
+</body>
+</html>

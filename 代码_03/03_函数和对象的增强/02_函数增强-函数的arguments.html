@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    function foo(m, n) {
+      // arguments 类似数组对象(不是数组, 但是有数组的属性length 可以通过索引获取数据 但是没有数组方法 如filter)
+      console.log(arguments)
+
+      // 默认用法
+      console.log(arguments[0])
+     
+      
+      // 获取所有参数的偶数
+      for (var item of arguments) {
+        if (item % 2 === 0) {
+          console.log(item)
+        }
+      }
+
+      // 没有 filter
+      // var evenNums = arguments.filter(item => item % 2 === 0)
+      // console.log(evenNums)
+
+      // 将arguments 转成数组方式一
+      var newArguments = []
+      for (var arg of arguments) {
+        newArguments.push(arg)
+      }
+      console.log("newArguments", newArguments)
+
+      // 将arguments 转成数组方式二  ES6
+      var newArguments1 = Array.from(arguments)
+      console.log("newArguments1", newArguments1)
+      var newArguments2 = [...arguments]
+      console.log("newArguments2", newArguments2)
+    
+      // 将arguments 转成数组方式三 slice
+      var newArguments3 = [].slice.apply(arguments)
+      console.log("newArguments3", newArguments3)
+    }
+
+    foo(10, 25, 32, 37)
+
+
+    // slice 方法
+    var name = ["abc", "cba", "nba"]
+    var newName = name.slice(1, 2) // 左闭右开  "cba"
+  </script>
+</body>
+</html>

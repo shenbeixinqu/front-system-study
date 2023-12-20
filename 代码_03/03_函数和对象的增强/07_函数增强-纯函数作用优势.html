@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+      // 1 安心的写 不需要关心作用域中的值目前是什么状态
+      var counter = 0
+      function add(num) {
+        return num
+      }
+
+      // 安心的用  调用函数 确定的输入一定产生确定的输出
+      add(5) // 10
+      add(5) // 10
+    </script>
+</body>
+</html>

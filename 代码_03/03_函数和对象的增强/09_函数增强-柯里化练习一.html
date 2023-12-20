@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+      /**
+        案例一  打印日志
+          日志的时间
+          日志的类型
+          具体信息 
+      */
+        function logInfo(date, type, message) {
+          console.log(`时间${date} 类型:${type} 内容:${message}`)
+        }
+
+        // 打印日志
+        logInfo("2022-06-01", "DEBUG", "修复界面搜索按钮点击的bug")
+        logInfo("2022-06-01", "DEBUG", "修复了从服务器请求数据后展示的bug")
+        logInfo("2022-06-01", "FEATURE", "增加了商品的过滤功能")
+
+        // 柯里化
+        var logInfo1 = date => type => message => {
+          console.log(`时间: ${date} 类型: ${type} 内容: ${message}`)
+        }
+
+        var logToday = logInfo1("2022-06-01")
+        var logTodayDebug = logToday("DEBUG")
+        var logTodayFeature = logToday("FEATURE")
+        
+        logTodayDebug("修复了从服务器请求数据后展示的bug")
+        logTodayFeature("新建过滤功能")
+    </script>
+</body>
+</html>

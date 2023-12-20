@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+       // 纯函数概念  
+       /**
+        * 固定的输入 固定的输出(不能使用闭包)
+        * 不能产生副作用       (不能进行修改) 
+        */
+      
+        // 不是纯函数 不满足条件2
+        var address = "沈阳"
+        function printInfo(info) {
+          console.log(info.name, info.age, info.message)
+          info.flag = "已经打印结束"
+        }
+
+        var obj = {
+          name: "why",
+          age: 18,
+          message: "哈哈哈"
+        }
+
+        printInfo(obj)
+
+    </script>
+</body>
+</html>
