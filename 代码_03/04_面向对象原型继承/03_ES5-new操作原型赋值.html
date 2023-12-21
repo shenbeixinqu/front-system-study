@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+        /**
+         * 构造函数作用
+         *    1-> 创建空对象
+         *        var obj = {}
+         *    2-> 将这个空对象赋值给this
+         *        this = obj
+         *    3-> 将函数的显式原型赋值给这个对象作为它的隐式原型
+         *        obj.__proto__ = Person.prototype
+         *    4-> 执行函数体中代码
+         *    5-> 将这个对象默认返回
+         */ 
+        function Foo() {
+
+        }
+
+        console.log(Foo.prototype)
+
+        var f1 = new Foo()
+        var f2 = new Foo()
+
+        console.log(f1.__proto__)
+        console.log(f2.__proto__)
+        console.log(f2.__proto__ === Foo.prototype)  // true
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+      function Person() {
+
+      }
+
+      console.log(Person.prototype)
+
+      // 在原有的原型基础上添加新的属性
+
+      // 方式一
+      // Person.prototype.message = "Hello world"
+      // Person.prototype.info = {name: "why", age: 17}
+      // Person.prototype.eating = function() {}
+      
+      // 方式二 直接赋值一个新的原型对象
+      Person.prototype = {
+        message: "Hello World",
+        info: {name: "why", age: 17},
+        eating: function() {},
+        // constructor: Person
+      }
+      // 方式二 与 方式一相比  缺少 constructor
+      Object.defineProperty(Person.prototype, 'constructor', {
+        configurable: true,
+        enumerable: false,
+        writable: true,
+        value: Person
+      })
+      console.log(Person.prototype)
+    </script>
+</body>
+</html>
