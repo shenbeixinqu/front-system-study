@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+      var obj = {
+        name: "why"
+      }
+      var _name = ""
+      Object.defineProperty(obj, 'name', {
+        set: function(value) {
+          console.log("set方法被调用了", value)
+          _name = value
+        },
+        get: function() {
+          console.log("get 方法被调用了")
+          return _name
+        }
+      })
+
+      obj.name = "kobe"
+      console.log(obj.name)
+    </script>
+</body>
+</html>

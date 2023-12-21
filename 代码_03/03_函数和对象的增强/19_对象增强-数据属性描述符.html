@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+      var obj = {
+        name: "why",
+        age: 18
+      }
+
+      Object.defineProperty(obj, 'name', {
+        configurable: false,  // 告诉js引擎, obj对象的name属性不可以被删除
+        enumerable: false,    // 告诉js引擎, obj对象的name属性不可枚举(for in/Object.keys)
+        writable: false,      // 告诉js引擎, obj对象的name属性不写入(只读属性 readonly)
+        value: "james",       // 告诉js引擎, 返回这个value
+      })
+
+      delete obj.name
+      console.log(obj)
+
+      console.log(Object.keys(obj))
+
+      obj.name = "kobe"
+      console.log(obj)
+
+      console.log(obj.name)
+    </script>
+</body>
+</html>

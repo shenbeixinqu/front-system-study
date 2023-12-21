@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+      "use strict"
+      // 1 不会意外创建全局变量
+      function foo() {
+        message = "Hello World"
+      }
+      foo()
+      console.log(message)
+
+      // 2 参数名称不能相同
+
+      // 3 八进制不能以0 开头  需要以0o开头
+
+      // 4 在严格模式下, 不绑定全局对象而是undefined
+    </script>
+</body>
+</html>
