@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script src="./js/inherit_utils.js"></script>
+    <script>
+
+      var obj = {
+        name: "why",
+        age: 18
+      }
+
+      var info = createObject(obj)
+      info.address = "china"
+      info.intro = "五湖四海"
+
+      console.log(info.name, info.address)
+      console.log(info)
+
+      // hasOwnProperty 判断非原型上是否有该属性
+      console.log(info.hasOwnProperty("name"))
+      console.log(info.hasOwnProperty("address"))
+
+      // in
+      console.log("name" in info)
+      console.log("address" in info)
+
+      // instanceof
+      // instanceof 用于判断对象和类(构造函数)之间的关系
+      function Person() {}
+      function Student() {}
+      inherit(Student, Person)
+
+      // stu实例(instance)对象
+      var stu = new Student()
+      console.log(stu instanceof Student)
+      console.log(stu instanceof Person)
+      console.log(stu instanceof Object)
+
+    </script>
+</body>
+</html>

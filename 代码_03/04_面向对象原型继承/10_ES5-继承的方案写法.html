@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script src="./js/inherit_utils.js"></script>
+    <script>
+
+      function Person(name, age) {
+        this.name = name
+        this.age = age
+      }
+
+      Person.prototype.running = function() {
+        console.log("running~")
+      }
+      Person.prototype.eating = function() {
+        console.log("eating~")
+      }
+
+      function Student(name, age, sno, score) {
+        // 属性继承
+        Person.call(this, name, age)
+        
+        this.sno = sno
+        this.score = score
+      }
+      // 方法继承
+      inherit(Student, Person)
+
+      Student.prototype.studying = function() {
+        console.log("studying~")
+      }
+
+      var stu1 = new Student("why", 19, 111, 99)
+      var stu2 = new Student("james", 29, 222, 88)
+      
+      console.log(stu1)
+      stu1.studying()
+    </script>
+</body>
+</html>
