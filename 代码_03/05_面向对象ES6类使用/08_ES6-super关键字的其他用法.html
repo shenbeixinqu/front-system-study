@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+        class Animal {
+          running() {
+            console.log("running")
+          }
+          eating() {
+            console.log("eating")
+          }
+          static sleep() {
+            console.log("static animal sleep")
+          }
+        }
+
+        class Dog extends Animal {
+          running() {
+            console.log("四条腿")
+            // 调用父类的方法
+            super.running()
+          }
+
+          static sleep() {
+            console.log("趴着")
+            super.sleep()
+          }
+        }
+
+        var dog = new Dog()
+        dog.running()
+        Dog.sleep()
+    </script>
+</body>
+</html>
