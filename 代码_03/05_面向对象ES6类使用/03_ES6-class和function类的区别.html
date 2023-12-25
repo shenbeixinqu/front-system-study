@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+       // function定义类
+       function Person1(name, age) {
+        this.name = name
+        this.age = age
+       }
+
+       Person1.prototype.running = function() {}
+       Person1.prototype.eating = function() {}
+
+       var p1 = new Person1("jame1", 19)
+
+       console.log(p1.__proto__ === Person1.prototype)
+       console.log(Person1.prototype.constructor)
+       console.log(typeof Person1)
+
+
+       // 不同点
+       Person1("abc", 100)
+       console.log("========")
+
+       
+       // class 定义类
+       class Person2{
+        constructor(name, age) {
+          this.name = name
+          this.age = age
+        }
+
+        running() {
+          console.log(running)
+        }
+        eating() {
+          console.log(eating)
+        }
+       }
+
+       var p2 = new Person2("kobe", 26)
+       console.log(p2.__proto__ === Person2.prototype)
+       console.log(Person2.prototype.constructor)
+    </script>
+</body>
+</html>

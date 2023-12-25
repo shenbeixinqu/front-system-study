@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+        // ES5 中添加参数和方法
+        // function Person(name, age) {
+        //   this.name = name
+        //   this.age = age
+        // }
+
+        // Person.prototype.running = function() {
+
+        // }
+
+        // ES6
+        class Person {
+          constructor(name, age) {
+            this.name = name
+            this.age = age
+          }
+
+          running() {
+            console.log(this.name + " running~")
+          }
+          eating() {
+            console.log(this.name + " eating")
+          }
+        }
+
+        // 创建实例对象
+        var p1 = new Person("james", 18)
+        console.log(p1)
+        console.log(p1.name, p1.age)
+        p1.running()
+        p1.eating()
+
+    </script>
+</body>
+</html>
