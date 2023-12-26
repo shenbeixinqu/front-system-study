@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+        // 注意一 有默认参数的形参放到后面
+        // 有默认参数的形参 是不会计算到length在内的
+        // 剩余参数也是放到后面
+
+        function foo(age, name = "why", ...args) {
+          console.log(name, age, args)
+        }
+
+        foo(18, "abc", "cba", "nba")
+        console.log(foo.length)
+    </script>
+</body>
+</html>

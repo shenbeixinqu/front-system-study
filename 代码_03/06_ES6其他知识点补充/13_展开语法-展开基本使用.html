@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+        const names = ["abc", "cba", "nba", "mba"]
+        const str = "hello"
+
+        const newNames = [...names, "aaa"]
+        console.log(newNames)
+
+        function foo(name1, name2, ...args) {
+          console.log(name1, name2, args)
+        }
+        foo(...names)
+        foo(...str)
+
+        const obj = {
+          name: "why",
+          age: 18
+        }
+
+        const info = {
+          ...obj,
+          height: 1.55
+        }
+
+        console.log(info)
+    </script>
+</body>
+</html>

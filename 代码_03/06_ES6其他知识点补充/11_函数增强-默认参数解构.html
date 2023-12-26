@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+        // 解构的回顾
+        const obj = {name: "why"}
+        const {name = "kobe", age = 17} = obj
+
+
+        // 默认参数与解构结合
+        // 函数的默认参数是一个对象
+        // function foo(obj = { name: "why", age: 18 }) {
+        //   console.log(obj.name, obj.age)
+        // }
+
+        // 进阶一
+        // function foo({name, age} = {name: "why", age: 18}) {
+        //   console.log(name, age)
+        // }
+
+        // 进阶二
+        function foo({name="james", age=19} = {}) {
+          console.log(name, age)
+        }
+        foo()
+    </script>
+</body>
+</html>
