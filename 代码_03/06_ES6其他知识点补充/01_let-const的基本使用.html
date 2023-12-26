@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // ES6之前
+    var message1 = "Hell World"
+    message1 = "Hello james"
+    message1 = "aaa"
+    console.log(message1)
+
+    // ES6
+    let message2 = "你好, 世界"
+    message2 = "你好, james"
+    message2 = 123
+    console.log(message2)
+
+    const message3 = "nihao, shijie"
+    // message3 = "nihao, james"
+
+    // 可以修改对象里面的内容  内存地址未进行更改
+    const info = {
+      name: "james",
+      age: 26
+    }
+
+    info.name = "kobe"
+    console.log(info)
+
+
+  </script>
+</body>
+</html>

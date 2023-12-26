@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+      // 在es5之前  只用全局和函数会形成自己的作用域
+      
+      // {
+      //   var message = "hello world"
+      // }
+
+      // console.log(message)
+
+      // 从ES6开始 使用let/const/function/class 声明的变量有块级作用域
+
+      {
+        const message = "shenyang"
+        let age = 15
+        class Person {}
+        function foo() {
+          console.log("foo function")
+        }
+      }
+
+      // console.log(age)
+      // console.log(message)
+      // const p = new Person()
+      // console.log(p)
+
+      foo()
+</script>
+</body>
+</html>

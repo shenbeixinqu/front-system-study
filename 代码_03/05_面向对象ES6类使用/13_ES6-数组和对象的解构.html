@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 1.数组的解构
+        var names = ["abc", "cba", undefined, "nba", "mba"]
+        
+        // 1.1 基本使用
+        // var [name1, name2] = names
+        // console.log(name1, name2)
+
+        // 1.2 严格的顺序
+        // var [name1, , , name4] = names
+        // console.log(name1, name4)
+
+        // 1.3 解构出数组
+        // var [name1, name2, ...newArgs] = names
+        // console.log(name1, name2, newArgs)
+
+        // 1.4 解构的默认值
+        // var [name1, name2, name3 = "default"] = names
+        // console.log(name1, name2, name3)
+
+        // 2.对象的解构
+        var obj = { name: "james", age: 18, height: 1.88}
+        // 2.1 基本使用
+        // var { name, age} = obj
+        // console.log(name, age)
+
+        // 2.2 顺序问题 对象的解构没有顺序 根据key解构
+        // var { age, name } = obj 
+        // console.log(age, name)
+
+        // 2.3 对变量进行重命名
+        // var { name: dName, age: dAge} = obj
+        // console.log(dName, dAge)
+
+        // 2.4. 默认值
+        var { 
+          height: wHeight, 
+          name: wName, 
+          age: wAge, 
+          address: wAddress = "中国"
+        } = obj
+        console.log(wName, wAge, wHeight, wAddress)
+    </script>
+</body>
+</html>
