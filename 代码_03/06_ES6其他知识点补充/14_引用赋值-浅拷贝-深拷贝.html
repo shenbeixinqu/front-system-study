@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj = {
+          name: "why",
+          age: 19,
+          height: 1.77,
+          friend: {
+            name: "why2"
+          }
+        }
+
+        // 引用赋值
+        // const info = obj
+        // info.name = "kobe"
+        // console.log(info)
+        // console.log(obj)
+
+        // 浅拷贝  展开运算符是浅拷贝
+        const info2 = {
+          ...obj
+        }
+
+        info2.name = "james"
+        console.log(info2.name)
+        console.log(obj.name)
+        info2.friend.name = "james2"
+        console.log(info2.friend.name)
+        console.log(obj.friend.name)
+
+        // 深拷贝
+        const info3 = JSON.parse(JSON.stringify(obj))
+        info3.friend.name = "curry"
+        console.log(info3.friend.name)
+        console.log(obj.friend.name)
+    </script>
+</body>
+</html>

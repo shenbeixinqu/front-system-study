@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+        // ES6之前存在的问题 (属性名相同 导致进行修改而不是进行添加)
+        const obj = {
+          name: "aaa",
+          fn: "bbb"
+        }
+
+        function foo(obj) {
+          obj.fn = function() {}
+        }
+
+        foo(obj)
+        console.log(obj)
+
+
+        // ES6之后可以使用Symbol生成一个独一无二的值
+        const s1 = Symbol()
+        const obj1 = {
+          [s1]: "aaa"
+        }
+
+        const s2 = Symbol()
+        obj1[s2] = "bbb"
+
+        console.log(obj1)
+
+        console.log(obj1)
+    </script>
+</body>
+</html>

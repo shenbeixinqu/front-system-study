@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+        const s1 = Symbol() // aaa
+        const s2 = Symbol() // bbb
+
+        // 添加到对象中
+        const obj = {
+          name: "why",
+          age: 19,
+          [s1]: "aaa",
+          [s2]: "bbb"
+        }
+
+        // 获取symbol对应的key  不包含symbol
+        console.log(Object.keys(obj))
+        console.log(Object.getOwnPropertySymbols(obj))
+        const symbolKeys = Object.getOwnPropertySymbols(obj)
+        for (const key of symbolKeys) {
+          console.log(obj[key])
+        }
+
+        // 3.2. 如果相同的key, 通过Symbol.for可以生成相同的Symbol值
+        const s5 = Symbol.for("ddd")
+        const s6 = Symbol.for("ddd")
+        console.log(s5 === s6)
+    </script>
+</body>
+</html>

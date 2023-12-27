@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // WeakSet的用法
+    // 和set的区别  只能存放对象类型
+    let obj1 = { name: "why" }
+    let obj2 = { name: "kobe" }
+    let obj3 = { name: "james" }
+    const weakSet = new WeakSet()
+
+    weakSet.add(obj1)
+    console.log(weakSet)
+
+    // 区别二 对对象的引用都是弱引用
+
+    // WeakSet的应用
+    const pWeakSet = new WeakSet()
+    class Person {
+      constructor() {
+        pWeakSet.add(this)
+      }
+
+      running() {
+        if (!pWeakSet.has(this)) {
+          console.log("Type error: 调用的方式不对")
+          return
+        }
+        console.log("running~")
+      }
+    }
+
+    let p = new Person()
+    p.running()
+
+    const runFn = p.running
+    runFn()
+    const obj = { run: runFn }
+    obj.run()
+  </script>
+</body>
+
+</html>

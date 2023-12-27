@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const info = { name: "why" }
+    const info2 = { age: 19 }
+
+    // 对象类型的局限性 不可以使用复杂类型作为key
+
+    // Map映射类型
+    const map = new Map()
+    map.set(info, "aaa")
+
+    console.log(map)
+
+    // Map 常见的属性及方法
+    // set方法 设置内容
+    map.set(info, "Ccc")
+    console.log(map)
+
+    //get 方法 获取内容
+    console.log(map.get(info))
+    
+    // has方法 判断内容
+    console.log(map.has(info))
+
+    // delete方法
+    console.log(map.delete(info))
+
+    // clear方法
+    console.log(map.clear())
+    
+  </script>
+</body>
+</html>
