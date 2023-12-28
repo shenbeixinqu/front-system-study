@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <h2 class="name"></h2>
+    <script>
+        const obj = {
+          name: "james",
+          age: 19,
+          height: 1.88
+        }
+
+        // let _name = obj.name
+        // Object.defineProperty(obj, "name", {
+        //   set(value) {
+        //     console.log("监听: 给name设置了新的值:", value)
+        //     _name = value
+        //   },
+        //   get() {
+        //     console.log("监听: 获取name的值")
+        //     return _name
+        //   }
+        // })
+
+        const keys = Object.keys(obj)
+        keys.forEach(key => {
+          let value = obj[key]
+          Object.defineProperty(obj, key, {
+            set(newValue) {
+              console.log(`监听: 给${key}设置了新的值`, newValue)
+              value = newValue
+            },
+            get() {
+              console.log(`监听: 获取${key}的值`)
+              return value
+            }
+          })
+        });
+       
+
+        console.log(obj.name)
+        obj.name = "kobe"
+    </script>
+</body>
+</html>

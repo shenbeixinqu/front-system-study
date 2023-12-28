@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+       const obj = {
+          name: "why",
+          age: 19,
+          height: 1.88
+       }
+
+       // 创建一个Proxy对象
+       const objProxy = new Proxy(obj, {
+        set(target, key, newValue) {
+          console.log(`监听: 监听${key}的值`)
+          target[key] = newValue
+        },
+        get(target, key) {
+          console.log(`监听: 监听${key}的值`)
+          return target[key]
+        }
+       })
+
+       // 对obj的所有操作 应该去操作objProxy
+       objProxy.name = "james"
+       console.log(obj)
+       console.log(objProxy.age)
+    </script>
+</body>
+</html>
