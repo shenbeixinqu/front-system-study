@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+        function execCode(counter, successCallback, failCallback) {
+          setTimeout(() => {
+              if (counter > 0) {
+                let total = 0
+                for (let i = 0; i < counter; i ++) {
+                  total += i
+                }
+                successCallback(total)
+              } else {
+                failCallback(`${counter}值有问题`)
+              }
+          }, 5000)
+        }
+
+        execCode(100, value => {
+          console.log("本次执行成功了:", value)
+        }, err => {
+          console.log("本次执行失败了:", err)
+        })
+    </script>
+</body>
+</html>
