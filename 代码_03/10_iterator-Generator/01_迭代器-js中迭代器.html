@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+        // 迭代器中需要有一个next函数 并且函数中需要有done 和 value 两个返回参数
+
+        const names = ["abc", "cba", "nba"]
+        // 给names中创建一个迭代器
+        let index = 0
+        const nameIterator = {
+          next: function() {
+            if (index < names.length) {
+              return { done: false, value: names[index]}
+            } else {
+              return { done: true}
+            }
+          }
+        }
+
+        console.log(nameIterator.next())
+        console.log(nameIterator.next())
+        console.log(nameIterator.next())
+        console.log(nameIterator.next())
+
+    </script>
+</body>
+</html>
