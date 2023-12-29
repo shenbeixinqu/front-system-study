@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+        const promise = new Promise((resolve, reject) => {
+          resolve("aaaa")
+        })
+
+        
+        // then 方法是返回一个新的Promise 这个新的Promise的决议等到then方法传入的回调函数有返回值时进行决议
+        // Promise 本身是支持链式调用的
+        // then方法返回一个新的Promise 链式中的then在等待这个新的Promise有决议之后执行
+
+        promise.then(res => {
+          console.log("成功调度", res)
+          return "bbbb"
+        }).then(res => {
+          console.log("第二个then方法", res)
+        })
+    </script>
+</body>
+</html>

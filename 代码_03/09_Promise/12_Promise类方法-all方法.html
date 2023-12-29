@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+        const p1 = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            // resolve("p1 resolve")
+            reject("p1 reject")
+          }, 3000)
+        })
+
+        const p2 = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("p2 resolve")
+          }, 2000)
+        })
+
+        const p3 = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("p3 resolve")
+          }, 5000)
+        })
+
+        // 如果有一个reject  直接抛出错误
+        Promise.all([p1, p2, p3]).then(res => {
+          console.log("all promise res:", res)
+        })
+    </script>
+</body>
+</html>

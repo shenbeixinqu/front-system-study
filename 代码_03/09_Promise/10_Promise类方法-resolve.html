@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+        // 实例方法
+        // const promise = new Promise((resolve) => {
+        //   resolve("result")
+        // })
+        // promise.then()
+
+
+        // 类方法
+        const promise = Promise.resolve("success")
+        
+        promise.then(res => {
+          console.log("then", res)
+        })
+
+        // 相当于 
+        new Promise(resolve => {
+          resolve("success")
+        })
+    </script>
+</body>
+</html>
