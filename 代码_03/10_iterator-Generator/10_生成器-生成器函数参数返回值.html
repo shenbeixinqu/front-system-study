@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function* foo(name1) {
+      console.log("执行内部代码: 1111", name1)
+      console.log("执行内部代码: 2222", name1)
+      const name2 = yield "aaaaa"
+      console.log("执行内部代码: 3333", name2)
+      console.log("执行内部代码: 4444", name2)
+      const name3 = yield "bbbb"
+      // return "bbbb"
+      console.log("执行内部代码: 5555", name3)
+      console.log("执行内部代码: 6666", name3)
+      yield "cccc"
+    }
+
+    const generator = foo("next1")
+    // 调用next方法
+    console.log(generator.next()) // { done: false, value: "aaaa" }
+    console.log(generator.next()) // { done: false, value: "bbbb" }
+    console.log(generator.next()) //  { done: false, value: "cccc" }
+    console.log(generator.next()) // {done: true, value: undefined}
+
+    // 3.在中间位置直接return, 结果
+    // console.log(generator.next()) // { done: false, value: "aaaa" }
+    // console.log(generator.next()) // { done: true, value: "bbbb" }
+    // console.log(generator.next()) // { done: true, value: undefined }
+    // console.log(generator.next()) // { done: true, value: undefined }
+    // console.log(generator.next()) // { done: true, value: undefined }
+    // console.log(generator.next()) // { done: true, value: undefined }
+  </script>
+</body>
+
+</html>

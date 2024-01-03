@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+      const names = ["abc", "cba", "nba"]
+      const nums = [100, 22, 66, 88, 55]
+    
+      function* createArrayIterator(arr) {
+        yield* arr
+      }
+
+      const namesIterator = createArrayIterator(names)
+      console.log(namesIterator.next())
+      console.log(namesIterator.next())
+      console.log(namesIterator.next())
+      console.log(namesIterator.next())
+
+
+      // yield 替换类中的实现
+      class Person{
+        constructor(name, age, height, friends) {
+          this.name = name
+          this.age = age
+          this.height = height
+          this.friends = friends
+        }
+        *[Symbol.iterator]() {
+          yield* this.friends
+        }
+      }
+
+      const p1 = new Person('james', 19, 1.99, ["curry", "kobe", "durrunt"])
+      const pInterator = p1[Symbol.iterator]()
+      console.log(pInterator.next())
+      console.log(pInterator.next())
+      console.log(pInterator.next())
+
+    </script>
+</body>
+</html>
