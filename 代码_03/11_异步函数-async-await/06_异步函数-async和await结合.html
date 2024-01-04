@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+        // 第一一些其他异步函数
+        function requestData(url) {
+          return new Promise(resolve => {
+            setTimeout(() => {
+              resolve(url)
+            }, 2000)
+          })
+        }
+
+        async function test() {
+          console.log("test function")
+          return "test"
+        }
+
+        async function bar() {
+          console.log("bar function")
+
+          return new Promise((resolve) => {
+            setTimeout(() => {
+              resolve("Bar")
+            }, 2000)
+          })
+        }
+
+        async function demo() {
+          console.log("demo function")
+          return {
+            then: function(resolve) {
+              resolve("Demo")
+            }
+          }
+        }
+
+        async function foo() {
+          console.log("foo function")
+
+          const res1 = await requestData("Why")
+          console.log("res1:", res1)
+
+          const res2 = await test()
+          console.log("res2:", res2)
+
+          const res3 = await demo()
+          console.log("res3:", res3)
+
+          const res4 = await bar()
+          console.log("res4:", res4)
+        }
+    </script>
+</body>
+</html>
