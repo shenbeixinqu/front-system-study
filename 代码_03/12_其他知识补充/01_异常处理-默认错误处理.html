@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+      // js遇到错误后 后续大代码不会执行
+
+      function sum(num1, num2) {
+        if (typeof num1 !== 'number') {
+          throw "type error: num1传入的类型有问题,必须为整数"
+        }
+
+        if (typeof num2 !== "number") {
+          throw "type error: num2传入的类型有问题,必须为整数"
+        }
+      }
+
+      const result = sum(123, "213")
+    </script>
+</body>
+</html>
