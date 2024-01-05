@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+      // storage 基本使用
+      // token的使用
+      let token = localStorage.getItem("token")
+      if (!token) {
+        console.log("请设置token")
+        token = "jameskobe"
+        localStorage.setItem("token", token)
+      }
+
+      console.log(token)
+    </script>
+</body>
+</html>
