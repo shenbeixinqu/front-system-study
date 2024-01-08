@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+        // 定义正则 对.转义
+        const re = /\./ig
+        const message = "abc.why"
+
+        const results = message.match(re)
+        console.log(results)
+
+        // 获取文件名
+        const fileNames = ["abc.html", "Home.jsx", "index.html", "index.js", "utils.js", "format.js"]
+
+        // 获取所有的js名
+        // x?  x是0个或者1个
+        const jsfileRe = /\.jsx?$/
+
+        const newFiles = fileNames.filter(item => jsfileRe.test(item))
+        console.log(newFiles)
+    </script>
+</body>
+</html>

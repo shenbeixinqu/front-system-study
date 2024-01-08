@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+        // 创建正则
+        const re1 = /abc/ig
+        const message = "fdabc123 faBC323 dfABC222 A2324aaBc"
+
+        // 使用正则上的实例方法
+        // 1.1 test方法
+        if(re1.test(message)) {
+          console.log("符合规则")
+        } else {
+          console.log("不符合规则")
+        }
+
+        // 1.2 exec方法 使用正则执行一个字符串  返回一个
+        const res1 = re1.exec(message)
+        console.log(res1)
+
+        // 使用字符串的方法 传入一个正则表达式
+        // 2.1 match方法   数组
+        const result2 = message.match(re1)
+        console.log(result2)
+
+        // 2.2 matchAll方法  返回一个迭代器
+        const result3 = message.matchAll(re1)
+        console.log("res", result3)
+        console.log(result3.next())
+        console.log(result3.next())
+        console.log(result3.next())
+        console.log(result3.next())
+
+        // 2.3 replact/ replaceAll
+
+        // 2.4 search
+        const result5 = message.search(re1)
+        console.log(result5)
+
+    </script>
+</body>
+</html>
