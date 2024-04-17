@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+    <!-- 1.默认传递event对象 -->
+    <button @click="btn1Click">按钮1</button>
+
+    <!-- 2.只有自己的参数 -->
+    <button @click="btn2Click('why', age)">按钮2</button>
+
+    <!-- 3.自己的参数和event对象 -->
+    <!-- 在模板中想要明确的event对象  $event -->
+    <button @click="btn3Click('why', age, $event)">按钮3</button>
+
+  </div>
+  
+  <script src="../lib/vue.js"></script>
+  <script>
+    // 1.创建app
+    const app = Vue.createApp({
+      // data: option api
+      data: function() {
+        return {
+          message: "Hello Vue",
+          age: 19,
+        }
+      },
+      methods: {
+        btn1Click(event) {
+          console.log("btn1click", event)
+        },
+        btn2Click(name, age) {
+          console.log(name, age)
+        },
+        btn3Click(name, age, event) {
+          console.log(name, age, event)
+        }
+      },
+    })
+
+    // 2.挂载app
+    app.mount("#app")
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+    <template v-if="Object.keys(infos).length">
+      <h2>个人信息</h2>
+      <ul>
+        <li>{{ infos.name }}</li>
+        <li>{{ infos.age }}</li>
+      </ul>
+    </template>
+    <template v-else>
+        暂无信息
+    </template>
+  </div>
+  
+  <script src="../lib/vue.js"></script>
+  <script>
+    // 1.创建app
+    const app = Vue.createApp({
+      // data: option api
+      data: function() {
+        return {
+          infos: {}
+          // infos: {name: "james", age: 19}
+        }
+      },
+    })
+
+    // 2.挂载app
+    app.mount("#app")
+  </script>
+</body>
+</html>

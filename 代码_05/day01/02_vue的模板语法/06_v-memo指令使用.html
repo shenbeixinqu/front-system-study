@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+    <div v-memo="[name]">
+      <h2>{{ name }}</h2>
+      <h2>{{ age }}</h2>
+      <h2>{{ height }}</h2>
+    </div>
+    <button @click="changeInfo">改变信息</button>
+  </div>
+  
+  <script src="./lib/vue.js"></script>
+  <script>
+    // 1.创建app
+    const app = Vue.createApp({
+      // data: option api
+      data: function() {
+        return {
+          name: "kobe",
+          age: 25,
+          height: 1.78
+        }
+      },
+      methods: {
+        /** v-memo设置监听的参数 其他参数进行变更时 不进行渲染**/
+        changeInfo() {
+          // this.name = "james"
+          this.age = 27
+        }
+      }
+    })
+
+    // 2.挂载app
+    app.mount("#app")
+  </script>
+</body>
+</html>

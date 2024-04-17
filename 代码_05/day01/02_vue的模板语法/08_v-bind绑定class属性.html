@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .active {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="app">
+    <!-- 1.绑定基本class -->
+    <h2 :class="classes">Hello World</h2>
+
+    <!-- 2.动态绑定class -->
+    <div>
+      <button :class="isActive ? 'active' : ''" @click="btnClick">按钮1</button>
+    </div>
+
+    <!-- 3.对象语法的基本使用 -->
+    <!-- 绑定对象的键值对 键为类名 值为布尔值 -->
+    <div>
+      <button :class="{ active: isActive}" @click="btnClick">按钮2</button>
+    </div>
+
+    <!-- 3.1 对象语法的多个键值对 -->
+    <div>
+      <button  :class="{ active: isActive, why: true, kobe: false}" @click="btnClick">按钮3</button>
+    </div>
+
+    <!-- 3.2 动态绑定的class 和 普通的class 同时使用 -->
+    <div>
+      <button class="abc cba" :class="getClass()" @click="btnClick">按钮4</button>
+    </div>
+  </div>
+  
+  <script src="./lib/vue.js"></script>
+  <script>
+    // 1.创建app
+    const app = Vue.createApp({
+      // data: option api
+      data: function() {
+        return {
+          classes: "abc cba",
+          isActive: false
+        }
+      },
+      methods: {
+        btnClick() {
+          this.isActive = !this.isActive
+        },
+        getClass() {
+          return {active: this.isActive, why: true, kobe: false}
+        }
+      },
+    })
+
+    // 2.挂载app
+    app.mount("#app")
+  </script>
+</body>
+</html>
