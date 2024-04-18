@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+    <h2>{{ info.name }}</h2>
+    <button @click="changeInfo">修改info</button>
+  </div>
+  
+  <script src="../lib/vue.js"></script>
+  <script>
+    // 1.创建app
+    const app = Vue.createApp({
+      // data: option api
+      data: function() {
+        return {
+          info: {name: "why", age: 18}
+        }
+      },
+      methods:{
+        changeInfo() {
+          // 创建一个新对象 复制给info
+          // this.info = { name: "koby" }
+
+          //  直接修改原对象的一个属性
+          this.info.name = "kobe"
+        }
+      },
+      watch: {
+        info: {
+          handler(newValue, oldValue) {
+            console.log("info监听", newValue, oldValue)
+          },
+          // 深度监听
+          deep: true,
+          // 第一次渲染直接监听
+          immediate: true
+        }
+      }
+    })
+
+    // 2.挂载app
+    app.mount("#app")
+  </script>
+</body>
+</html>

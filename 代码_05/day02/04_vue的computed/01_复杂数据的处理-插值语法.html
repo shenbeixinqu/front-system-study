@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+    <!-- 1.拼接名字 -->
+    <h2>{{ firstName + " " + lastName }}</h2>
+
+    <!-- 2.显示分数等级 -->
+    <h2>{{ score >= 60 ? "合格" : "不合格" }}</h2>
+
+    <!-- 3.反转单词显示文本 -->
+    <h2>{{ message.split(" ").reverse().join(" ") }}</h2>
+  </div>
+  
+  <script src="../lib/vue.js"></script>
+  <script>
+    // 1.创建app
+    const app = Vue.createApp({
+      // data: option api
+      data: function() {
+        return {
+          // 姓名
+          firstName: "kobe",
+          lastName: "bryant",
+          
+          // 分数
+          score: 80,
+
+          // 一串文本
+          message: "my name is why"
+        }
+      },
+    })
+
+    // 2.挂载app
+    app.mount("#app")
+  </script>
+</body>
+</html>
