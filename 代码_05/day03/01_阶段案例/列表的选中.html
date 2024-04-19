@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .active {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="app">
+    <h2>电影列表</h2>
+    <ul>
+      <li
+        :class="{active: index === currentIndex}"
+        @click="clickRow(index)"
+        v-for="(movie, index) in movies">
+        {{ movie }}
+      </li>
+    </ul>
+  </div>
+  
+  <script src="../lib/vue.js"></script>
+  <script>
+    // 1.创建app
+    const app = Vue.createApp({
+      // data: option api
+      data: function() {
+        return {
+          currentIndex: -1,
+          movies: ["阿凡达", '警察故事', '小时代', '星际迷航']
+        }
+      },
+      methods: {
+        clickRow(index) {
+          this.currentIndex = index
+        }
+      }
+    })
+
+    // 2.挂载app
+    app.mount("#app")
+  </script>
+</body>
+</html>

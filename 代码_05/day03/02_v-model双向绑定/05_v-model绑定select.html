@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+    <select v-model="fruit">
+      <option value="orange">橘子</option>
+      <option value="banana">香蕉</option>
+      <option value="apple">苹果</option>
+    </select>
+    <h2>单选：{{ fruit }}</h2>
+    <br>
+    <select v-model="fruits" multiple>
+      <option value="orange">橘子</option>
+      <option value="banana">香蕉</option>
+      <option value="apple">苹果</option>
+    </select>
+    <h2>多选： {{ fruits }}</h2>
+  </div>
+  
+  <script src="../lib/vue.js"></script>
+  <script>
+    // 1.创建app
+    const app = Vue.createApp({
+      // data: option api
+      data: function() {
+        return {
+          fruit: "",
+          fruits: []
+        }
+      },
+    })
+
+    // 2.挂载app
+    app.mount("#app")
+  </script>
+</body>
+</html>

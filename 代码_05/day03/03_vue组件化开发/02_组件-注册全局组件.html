@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .product {
+      background-color: skyblue;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="app">
+    <!-- 内容一 -->
+    <product-item></product-item>
+
+    <!-- 内容二 -->
+    <product-item></product-item>
+
+    <!-- 内容三 -->
+    <product-item></product-item>
+
+  </div>
+
+  <!-- 组件product-item的模板 -->
+  <template id="item">
+    <div class="product">
+      <div>标题</div>
+      <div>￥9.9秒杀</div>
+      <p>包邮到付</p>
+    </div>
+  </template>
+  
+  <script src="../lib/vue.js"></script>
+  <script>
+    
+    // 1.组件: App组件(根组件)
+    const App = {}
+
+    // 2.创建app
+    const app = Vue.createApp(App)
+
+    const productItem = {
+      template: '#item'
+    }
+    app.component('product-item', productItem)
+
+    // 2.挂载app
+    app.mount("#app")
+  </script>
+</body>
+</html>
