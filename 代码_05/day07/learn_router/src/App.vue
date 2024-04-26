@@ -7,6 +7,8 @@
       <router-link to="/user/123">用户123</router-link>
       <router-link to="/user/789">用户789</router-link>
 
+      <router-link to="/order">订单</router-link>
+
       <!-- 编程式导航 -->
       <span @click="homeClick">首页</span>
       <button @click="btnClick">关于</button>
