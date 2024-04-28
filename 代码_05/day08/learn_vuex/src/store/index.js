@@ -1,9 +1,11 @@
 import { createStore } from 'vuex'
 import { CHANGE_INGO } from './mutation_types'
+import homeModule from './modules/home'
+import ageModule from './modules/age'
 
 export default createStore({
   state: () => ({
-    counter: 991,
+    // counter: 991,
     name: "kobe",
     age: 27,
     friends: [
@@ -55,7 +57,15 @@ export default createStore({
     }
   },
   actions: {
+    incrementAction(context) {
+      context.commit('incrementAge')
+    },
+    changeNameAction(context, payload) {
+      context.commit('changeName', payload)
+    }
   },
   modules: {
+    home: homeModule,
+    age: ageModule
   }
 })

@@ -1,21 +1,23 @@
 <template>
-  <div class="app">
-    <button @click="changeName('王小波')">修改name</button>
-    <button @click="incrementAge">递增age</button>
-    <button @click="changeInfo({ name: '张三', age: 51 })">修改changeInfo</button>
-    <h2>Store name: {{ $store.state.name }}</h2>
-    <h2>Store age: {{ $store.state.age }}</h2>
+  <div>
+    <h2>年龄: {{ $store.state.age.age }}</h2>
+    <h2>getters： {{ $store.getters.doubleAge }}</h2>
+
+     <!-- 2.使用getters时, 是直接getters.xxx -->
+     <h2>age模块的doubleCounter: {{ $store.getters["age/doubleAge"] }}</h2>
+
+      <button @click="incrementCount">count模块+1</button>
   </div>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
-import { CHANGE_INGO} from '../store/mutation_types'
-
+//  在分模块引入时  state中数据需要加上模块名  getters mutataions actions则不需要
 export default {
   methods: {
-    ...mapMutations(['changeName', 'incrementAge', CHANGE_INGO])
-  },  
+    incrementCount() {
+      this.$store.commit('age/changeAge')
+    }
+  },
 }
 </script>
 
