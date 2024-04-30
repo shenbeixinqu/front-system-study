@@ -1,13 +1,12 @@
 <template>
   <div class="app">
-    App content
+    <router-view></router-view>
+    <tab-bar />
   </div>
 </template>
 
-<script>
-export default {
-
-}
+<script setup>
+import TabBar from './components/tab-bar/tab-bar.vue'
 </script>
 
 <style>
