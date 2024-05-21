@@ -1,6 +1,6 @@
 ### 使用vite创建项目
 
-```vue
+```javascript
 npm init vue@latest
 ```
 
@@ -8,7 +8,7 @@ npm init vue@latest
 
 ### 不同方式导入
 
-```vue
+```javascript
 import {} from module
 import defaultExport from module
 
@@ -27,6 +27,10 @@ import defaultExport from module
   import message from './module.js'
 
   console.log(message)  // 输出 'hello world'
+
+ - 在vue组件中,通常使用第一种方式导入vue本身或其他库的命名导出,而使用第二种方式导入vue的默认导出
+   import Vue from 'vue'
+   import { Component, Directive } from 'vue-property-decorator'
   
 ```
 
